@@ -1,7 +1,23 @@
-.wrap {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main_box {
+  @include main-box;
+}
+
+.title_text {
+  font-size: 2rem;
+  color: $--main-text;
+  font-weight: bold;
+}
+
+.title_button_wrap {
+  @include set-middle(column, 10px);
+  width: 100%;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.title_route_button {
+  @include default-button(100%, 50px);
+  &:hover {
+    @include button-jump-animation;
+  }
 }

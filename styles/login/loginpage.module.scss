@@ -1,0 +1,17 @@
+.main_box {
+  @include main-box;
+}
+
+.input_wrap {
+  @include set-middle(column, 10px);
+  width: 100%;
+  min-width: 350px;
+  max-width: 650px;
+  height: 85%;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.login_button {
+  @include default-button(250px, 50px);
+}
