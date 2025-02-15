@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.30.8",
     "@hookform/resolvers": "^4.0.0",
     "axios": "^1.7.9",
     "mobx": "^6.13.6",

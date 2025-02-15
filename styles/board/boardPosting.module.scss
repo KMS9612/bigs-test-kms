@@ -1,0 +1,28 @@
+.main_box {
+  @include main_box;
+}
+
+.editor_wrap {
+  @include set-middle(column, 15px);
+  width: 650px;
+  height: 100%;
+  overflow: auto;
+}
+
+.editor_submit_button {
+  @include default-button(100%, 50px);
+}
+
+.image_preview_box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  gap: 5px;
+}
+
+.default_image {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  color: rgb(102, 101, 101);
+}
