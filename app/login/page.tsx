@@ -8,8 +8,10 @@ import {
 } from "@/src/types/login/loginFormTypes";
 import { useForm } from "react-hook-form";
 import loginUser from "@/src/service/users/loginUser";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
   const inputObj: IInputObjElements[] = [
     {
       labelName: "Email",
@@ -31,7 +33,11 @@ export default function LoginPage() {
 
   const onSubmit = handleSubmit(async (data) => {
     const responseData = await loginUser(data.username, data.password);
-    console.log(responseData);
+    if (responseData) {
+      router.push("/board");
+    } else {
+      alert("로그인에 실패했습니다.");
+    }
   });
   return (
     <div className={styles.main_box}>
