@@ -19,7 +19,8 @@ body {
   font-family: "sour gummy", "noto sans kr";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include set-middle;
+  @include set-middle(column, 5px);
+  padding: 15px;
 }
 
 body {

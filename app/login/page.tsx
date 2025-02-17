@@ -35,6 +35,7 @@ export default function LoginPage() {
     const responseData = await loginUser(data.username, data.password);
     if (responseData) {
       router.push("/board");
+      sessionStorage.setItem("email", data.username);
     } else {
       alert("로그인에 실패했습니다.");
     }

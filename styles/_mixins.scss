@@ -8,7 +8,7 @@
 }
 
 // UI
-@mixin default-button($width, $height) {
+@mixin default-button($width: 100%, $height: 50px) {
   @include set-middle;
   width: $width;
   height: $height;
@@ -23,7 +23,7 @@
 @mixin main-box {
   @include set-middle(column, 30px);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px);
   background: $--main-bg;
   border-radius: 15px;
 }
